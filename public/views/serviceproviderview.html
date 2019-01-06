@@ -1,0 +1,63 @@
+<div class="container" ng-show="serproviewc.showbuttons==1">
+    <button class="btn btn-lg btn-primary" type="submit" ng-click="serproviewc.newreq()">New Requests</button>
+    <button class="btn btn-lg btn-primary" type="submit" ng-click="serproviewc.ongoingreq()">Ongoing Requests</button>
+    <button class="btn btn-lg btn-primary" type="submit" ng-click="serproviewc.donereq()">Done Requests</button>
+    
+</div>
+<div ng-show="serproviewc.shownewrequests==1">
+<div class="container"  ng-repeat="newrequest in serproviewc.newrequestsinfo">
+        <div class="card col-sm-9 col-lg-9 col-md-9 " style="margin-bottom:10%;border-color:black;box-shadow: 10px 10px">
+                <div class="card-header">
+                  CustomerId:<p style="color:black">{{newrequest.customerid}}</p>
+                </div>
+                <hr>
+                <div class="card-block">
+                  Status:<h4 class="card-title">{{newrequest.status}}</h4>
+                  RequestId:<p>{{newrequest.requestid}}</p>
+
+                  
+                  <button class="btn btn-primary" ng-click="serproviewc.updatestatus(newrequest.requestid)">Updaterequest</button>
+                </div>
+              </div>
+
+</div>
+<button class="btn btn-primary" ng-click="serproviewc.closerequests()">Close</button>
+</div>
+<div ng-show="serproviewc.showongoingrequests==1">
+        <div class="container"  ng-repeat="ongoingrequest in serproviewc.ongoingrequestsinfo">
+                <div class="card col-sm-9 col-lg-9 col-md-9 " style="margin-bottom:10%;border-color:black;box-shadow: 10px 10px">
+                        <div class="card-header">
+                          CustomerId:<p style="color:black">{{ongoingrequest.customerid}}</p>
+                        </div>
+                        <hr>
+                        <div class="card-block">
+                          Status:<h4 class="card-title">{{ongoingrequest.status}}</h4>
+                          RequestId:<p>{{ongoingrequest.requestid}}</p>
+        
+                          
+                          <button class="btn btn-primary" ng-click="serproviewc.makeitdone(ongoingrequest.requestid)">Updaterequest</button>
+                        </div>
+                      </div>
+        
+        </div>
+        <button class="btn btn-primary" ng-click="serproviewc.closerequests()">Close</button>
+        </div>
+
+        <div ng-show="serproviewc.showdonerequests==1">
+                <div class="container"  ng-repeat="donerequest in serproviewc.donerequestsinfo">
+                        <div class="card col-sm-9 col-lg-9 col-md-9 " style="margin-bottom:10%;border-color:black;box-shadow: 10px 10px">
+                                <div class="card-header">
+                                  CustomerId:<p style="color:black">{{donerequest.customerid}}</p>
+                                </div>
+                                <hr>
+                                <div class="card-block">
+                                  Status:<h4 class="card-title">{{donerequest.status}}</h4>
+                                  RequestId:<p>{{donerequest.requestid}}</p>
+                
+                                  
+                                </div>
+                              </div>
+                
+                </div>
+                <button class="btn btn-primary" ng-click="serproviewc.closerequests()">Close</button>
+                </div>

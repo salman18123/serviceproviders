@@ -1,0 +1,17 @@
+<div  class="container container-fluid" ng-repeat="provider in cusviewc.serviceprovidersinfo">
+        
+        
+        <div class="card col-sm-9 col-lg-9 col-md-9 " style="margin-bottom:10%;border-color:black;box-shadow: 10px 10px">
+            <div class="card-header">
+              <h1 style="color:black">{{provider.Name}}</h1>
+            </div>
+            <hr>
+            <div class="card-block">
+              <h4 class="card-title">{{provider.description}}</h4>
+              <h4 class="card-title">{{provider.serviceprovided}}</h4>
+              <button class="btn btn-primary" ng-click="cusviewc.makingrequest(provider.organizationid)">Request Service</button>
+            </div>
+          </div>
+    
+    
+    </div>

@@ -1,0 +1,21 @@
+<div class="container">
+    <h1 class="welcome text-center">Welcome</h1>
+        <div class="card card-container">
+        <h2 class='login_title text-center'>Register</h2>
+        <hr>
+
+            <form class="form-signin">
+                <span id="reauth-email" class="reauth-email" ></span>
+                <p class="input_title">Name</p>
+                <input type="text" id="inputEmail" ng-model="serproc.name" class="login_box" placeholder="user01@IceCode.com" required autofocus>
+                <p class="input_title">Password</p>
+                <input type="password" id="inputPassword" ng-model="serproc.password" class="login_box" placeholder="******" required>
+                <p class="input_title">Description</p>
+                <textarea rows="4" cols="50" ng-model="serproc.description" placeholder="data"></textarea><br><br>
+                <p class="input_title">ServiceProvided</p>
+                <textarea rows="4" cols="50" ng-model="serproc.serviceprovided" placeholder="data"></textarea><br><br>
+                <button class="btn btn-lg btn-primary" type="submit" ng-click="serproc.clicking()">Register</button>
+                <button class="btn btn-lg btn-primary" type="submit" ng-click="serproc.loggingin()">Having Accont? Login</button>
+            </form><!-- /form -->
+        </div><!-- /card-container -->
+    </div><!-- /container -->
